@@ -16,9 +16,9 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: npm install, build, and test
-        run: |
+      - name: npm install and test
+        run:
           npm i
-          npm run startrunner & sleep 10; npm test
+          npm run startrunner & sleep 10; npm test:integration
         env:
           CI: true

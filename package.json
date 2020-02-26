@@ -4,6 +4,7 @@
   "description": "https://help.github.com/en/actions/building-actions/creating-a-docker-container-action",
   "main": "jest-puppeteer.config.js",
   "dependencies": {
+    "jest": "^25.1.0",
     "jest-puppeteer": "^4.4.0",
     "puppeteer": "^2.1.1"
   },

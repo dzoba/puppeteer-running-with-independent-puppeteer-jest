@@ -10,8 +10,8 @@
   },
   "devDependencies": {},
   "scripts": {
-    "runner": "node app.js",
-    "test:integration": "jest -c integration/jest.config.js",
+    "runner": "node ./app.js",
+    "test:integration": "./node_modules/jest/bin/jest.js -c integration/jest.config.js",
     "test:e2e": "jest"
   },
   "repository": {

@@ -11,6 +11,7 @@ jobs:
       - name: npm install and test
         run:
           npm i
+          ls
           npm run runner & sleep 10; npm run test:integration
         env:
           CI: true

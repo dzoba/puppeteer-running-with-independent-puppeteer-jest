@@ -7,6 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     name: Testful Test
     steps:
+      - uses: actions/checkout@v1
       - name: npm install and test
         run:
           npm i

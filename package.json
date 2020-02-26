@@ -1,0 +1,26 @@
+{
+  "name": "hello-world-docker-action",
+  "version": "1.0.0",
+  "description": "https://help.github.com/en/actions/building-actions/creating-a-docker-container-action",
+  "main": "jest-puppeteer.config.js",
+  "dependencies": {
+    "jest-puppeteer": "^4.4.0",
+    "puppeteer": "^2.1.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "startrunner": "node app-1.js",
+    "test:integration": "jest -c integration/jest.config.js",
+    "test:e2e": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dzoba/hello-world-docker-action.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dzoba/hello-world-docker-action/issues"
+  },
+  "homepage": "https://github.com/dzoba/hello-world-docker-action#readme"
+}

@@ -12,6 +12,5 @@ jobs:
         run:
           npm i
           ls
-          npm run runner & sleep 10; npm run test:integration
         env:
           CI: true

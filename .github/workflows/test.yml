@@ -12,5 +12,6 @@ jobs:
         run:
           npm i
           ls
+          npm run runner
         env:
           CI: true

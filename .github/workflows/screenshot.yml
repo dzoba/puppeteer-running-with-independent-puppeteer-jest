@@ -1,0 +1,5 @@
+steps:
+  - name: Take photo of github.com
+    uses: "lannonbr/puppeteer-screenshot-action@1.0.0"
+    with:
+      url: https://dzoba.com

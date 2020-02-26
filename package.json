@@ -9,7 +9,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "startrunner": "node app.js",
+    "runner": "node app.js",
     "test:integration": "jest -c integration/jest.config.js",
     "test:e2e": "jest"
   },

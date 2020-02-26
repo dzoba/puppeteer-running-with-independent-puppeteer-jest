@@ -1,3 +1,5 @@
+console.log("$$$$$$$$$$$$ Node")
+
 const puppeteer = require('puppeteer');
 
 (async () => {

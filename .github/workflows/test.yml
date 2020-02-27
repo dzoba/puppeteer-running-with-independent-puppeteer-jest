@@ -10,10 +10,10 @@ jobs:
       - uses: actions/checkout@v1
       - name: npm install and test
         run:
-          npm i
-          ls
-          echo "This is before"
-          npm run runner
-          echo "This is after"
+          npm i;
+          ls;
+          echo "This is before";
+          npm run runner;
+          echo "This is after";
         env:
           CI: true

@@ -12,8 +12,6 @@ jobs:
         run:
           echo "@@@ Begin";
           npm i;
-          ls;
-          ls node_modules/;
           npm run runner & sleep 10;
           npm run test:integration;
           echo "@@@ End";

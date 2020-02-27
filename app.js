@@ -1,7 +1,8 @@
-console.log("$$$$$$$$$$$$ Node")
-const http = require('http');
-const puppeteer = require('puppeteer');
+console.log(`%%%%% Running file which starts puppeteer independent of jest`)
+const http = require(`http`);
+const puppeteer = require(`puppeteer`);
 
+// Start puppeteer
 (async () => {
   const browser = await puppeteer.launch({
     args: [
@@ -9,26 +10,27 @@ const puppeteer = require('puppeteer');
     ]
   });
   const page = await browser.newPage();
-  await page.goto('https://dzoba.com');
-  await page.screenshot({path: 'example.png'});
-
+  await page.goto(`https://dzoba.com`);
+  const title = await page.title();
+  console.log(`%%%%% Independent puppeteer has retrieved title: ${title}`)
   await page.evaluate(_ => {
-    console.log('I am really in the page', document.body)
+    console.log(`%%%%% This console log goes into the puppeteer-controlled page`)
   });
 })();
 
 
-const hostname = '127.0.0.1';
+// Open port which will allow tests to signal when they are finished
+const hostname = `127.0.0.1`;
 const port = 8765;
 
 const server = http.createServer((req, res) => {
   res.statusCode = 200;
-  res.setHeader('Content-Type', 'text/plain');
-  res.end('Hello World');
-  console.log('Ending process')
+  res.setHeader(`Content-Type`, `text/plain`);
+  res.end(`Hello World`);
+  console.log(`%%%%% Ending process`)
   process.exit()
 });
 
 server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+  console.log(`%%%%% Exit server running at http://${hostname}:${port}/`);
 });

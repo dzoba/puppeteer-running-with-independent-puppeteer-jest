@@ -1,5 +1,5 @@
 console.log("$$$$$$$$$$$$ Node")
-
+const http = require('http');
 const puppeteer = require('puppeteer');
 
 (async () => {
@@ -15,9 +15,20 @@ const puppeteer = require('puppeteer');
   await page.evaluate(_ => {
     console.log('I am really in the page', document.body)
   });
-
-  setTimeout(async () => {
-    console.log('Ending app one')
-    await browser.close();
-  }, 25000)
 })();
+
+
+const hostname = '127.0.0.1';
+const port = 8765;
+
+const server = http.createServer((req, res) => {
+  res.statusCode = 200;
+  res.setHeader('Content-Type', 'text/plain');
+  res.end('Hello World');
+  console.log('Ending process')
+  process.exit()
+});
+
+server.listen(port, hostname, () => {
+  console.log(`Server running at http://${hostname}:${port}/`);
+});

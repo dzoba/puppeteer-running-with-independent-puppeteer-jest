@@ -12,7 +12,8 @@
   "scripts": {
     "runner": "node ./app.js",
     "test:integration": "./node_modules/jest/bin/jest.js -c integration/jest.config.js",
-    "test:e2e": "jest"
+    "test:e2e": "jest",
+    "both": "node ./app.js & sleep 10; ./node_modules/jest/bin/jest.js -c integration/jest.config.js"
   },
   "repository": {
     "type": "git",

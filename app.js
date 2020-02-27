@@ -19,5 +19,5 @@ const puppeteer = require('puppeteer');
   setTimeout(async () => {
     console.log('Ending app one')
     await browser.close();
-  }, 30000)
+  }, 25000)
 })();

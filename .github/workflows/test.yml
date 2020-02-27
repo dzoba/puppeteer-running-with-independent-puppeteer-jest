@@ -12,6 +12,8 @@ jobs:
         run:
           npm i
           ls
+          echo "This is before"
           npm run runner
+          echo "This is after"
         env:
           CI: true

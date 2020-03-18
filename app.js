@@ -15,15 +15,8 @@ const puppeteer = require(`puppeteer`);
     await page.goto("https://example.com");
     const title = await page.title();
     console.log(`%%%%% Independent puppeteer has retrieved title: ${title}`)
-    const isActuallyChrome = await page.evaluate(() => {
-      for (var i=0; i<navigator.plugins.length; i++){
-        if (navigator.plugins[i].name == 'Chrome PDF Viewer'){
-          return true;
-        }
-      }
-      return false;
-    });
-    console.log(`%%%%% isActuallyChrome: ${isActuallyChrome}`)
+    const browserVersion = await page.browser().version();
+    console.log(`%%%%% browserVersion: ${browserVersion}`)
   // } catch (e) {
   //   console.log(e.message)
   // }

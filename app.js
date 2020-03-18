@@ -10,7 +10,11 @@ const puppeteer = require(`puppeteer`);
       headless: false,
       args: [
         `--remote-debugging-port=21222`,
-        `--no-sandbox`
+        `--no-sandbox`,
+        `--disable-gpu`,
+        `--disable-setuid-sandbox`,
+        `--disable-software-rasterizer`,
+        `--disable-dev-shm-usage`,
       ]
     });
 

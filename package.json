@@ -11,7 +11,7 @@
   "devDependencies": {},
   "scripts": {
     "docker": "npm i; npm run runner;",
-    "runner": "node ./app.js",
+    "runner": "node ./app.js & sleep 120",
     "test:integration": "./node_modules/jest/bin/jest.js -c integration/jest.config.js",
     "both": "node ./app.js & sleep 10"
   },

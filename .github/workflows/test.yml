@@ -18,7 +18,7 @@ jobs:
           CI: true
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
       - name: Run Runner
-        run: Xvfb -ac :99 -screen 0 1280x1024x16 > /dev/null 2>&1 & export DISPLAY=:99.0 & npm run runner & sleep 60
+        run: Xvfb -ac :99 -screen 0 1280x1024x16 > /dev/null 2>&1 & sleep 10 & export DISPLAY=:99.0 & sleep 10 & npm run runner & sleep 60
       # - name: asdf
       #   run: npm run test:integration
       - name: Test Chrome presence

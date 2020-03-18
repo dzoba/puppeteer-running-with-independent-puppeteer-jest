@@ -9,7 +9,8 @@ const puppeteer = require(`puppeteer`);
       // executablePath: '/usr/bin/google-chrome',
       headless: false,
       args: [
-        `--remote-debugging-port=21222`
+        `--remote-debugging-port=21222`,
+        `--no-sandbox`
       ]
     });
 

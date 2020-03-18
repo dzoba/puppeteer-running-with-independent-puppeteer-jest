@@ -15,7 +15,7 @@ jobs:
       - name: Use Container
         uses: dzoba/headful-chrome-puppeteer@master
         with:
-          args: npm run runner
+          args: npm run docker
       # - name: NPM Install
       #   run: npm i
       #   env:

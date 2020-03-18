@@ -19,6 +19,6 @@ jobs:
           echo "@@@ End";
         env:
           CI: true
-          PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
+          # PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
       - name: Test Chrome presence
         run: which google-chrome

@@ -18,7 +18,7 @@ jobs:
           CI: true
           PUPPETEER_SKIP_CHROMIUM_DOWNLOAD: 'true'
       - name: Run Runner
-        run: npm run runner
+        run: npm run runner & sleep 60
       # - name: asdf
       #   run: npm run test:integration
       - name: Test Chrome presence

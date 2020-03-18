@@ -4,22 +4,21 @@ const puppeteer = require(`puppeteer`);
 
 // Start puppeteer
 (async () => {
-  // try {
+
     const browser = await puppeteer.launch({
       executablePath: '/usr/bin/google-chrome',
+      headless: false,
       args: [
         `--remote-debugging-port=21222`
       ]
     });
+
     const page = await browser.newPage();
     await page.goto("https://example.com");
     const title = await page.title();
     console.log(`%%%%% Independent puppeteer has retrieved title: ${title}`)
     const browserVersion = await page.browser().version();
     console.log(`%%%%% browserVersion: ${browserVersion}`)
-  // } catch (e) {
-  //   console.log(e.message)
-  // }
 })();
 
 // Open port which will allow tests to signal when they are finished

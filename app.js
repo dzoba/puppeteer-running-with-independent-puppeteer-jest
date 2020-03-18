@@ -24,8 +24,6 @@ const puppeteer = require(`puppeteer`);
       return false;
     });
     console.log(`%%%%% isActuallyChrome: ${isActuallyChrome}`)
-
-    })
   // } catch (e) {
   //   console.log(e.message)
   // }

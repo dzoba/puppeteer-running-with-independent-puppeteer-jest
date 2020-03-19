@@ -17,7 +17,6 @@ jobs:
         uses: dzoba/headful-chrome-puppeteer@master
         with:
           args: npm run docker
-
       # - name: NPM Install
       #   run: npm i
       #   env:

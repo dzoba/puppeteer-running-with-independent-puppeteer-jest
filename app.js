@@ -6,8 +6,8 @@ const puppeteer = require(`puppeteer`);
 (async () => {
 
     const browser = await puppeteer.launch({
-      executablePath: 'google-chrome-unstable',
-      headless: false,
+      // executablePath: 'google-chrome-unstable',
+      // headless: false,
       args: [
         `--remote-debugging-port=21222`,
         `--no-sandbox`,
